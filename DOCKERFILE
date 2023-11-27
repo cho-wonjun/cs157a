@@ -1,0 +1,5 @@
+# Example code of using tar file with persisting data
+FROM commited-container-image
+COPY volume.tar .
+RUN tar -xf volume.tar -C path-to-volume-mount-point &&\
+  rm -f volume.tar
